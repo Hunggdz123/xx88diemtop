@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển điểm</title>
+    <link rel="icon" type="image/png" href="images/LLwin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="form">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="https://videos.files.wordpress.com/T07SD9Eb/ok.mp4" type="video/mp4" />
+    </video>
+    <div class="page-shell">
+      <div class="app-card">
+        <div class="brand-wrap">
+          <img
+            class="brand-logo"
+            src="images/logoxx88.png"
+            alt="logoxx88 logo"
+          />
+        </div>
+
+        <h2 class="page-title">XỬ LÝ CHUYỂN ĐIỂM</h2>
+
+        <form id="transferForm" class="transfer-form" novalidate>
+          <div class="input-row">
+            <input id="sourceAccount" type="text" minlength="4" placeholder="Nhập tài khoản nguồn" aria-label="Nhập tài khoản nguồn" />
+          </div>
+          <div class="input-row">
+            <input id="targetAccount" type="text" minlength="4" placeholder="Nhập tài khoản đến" aria-label="Nhập tài khoản đến" />
+          </div>
+          <div class="input-row">
+            <input id="transferAmount" type="number" min="1" placeholder="Nhập số điểm chuyển" aria-label="Nhập số điểm chuyển" />
+          </div>
+
+          <button class="verify-box" type="button" aria-pressed="false" data-verified="false">
+            <div class="verify-left">
+              <span class="checkbox" aria-hidden="true"></span>
+              <span class="verify-label">Verify you are human</span>
+            </div>
+            <div class="cloudflare-mark">
+              <span class="cloudflare-icon">◉</span>
+              <span>CLOUDFLARE</span>
+              <small>Privacy · Terms</small>
+            </div>
+          </button>
+
+          <button type="submit" class="bottom-bar">CHUYỂN ĐIỂM</button>
+        </form>
+      </div>
+    </div>
+
+    <dialog class="notice-dialog" id="noticeDialog" aria-labelledby="noticeTitle" aria-describedby="noticeMessage">
+      <div class="notice-icon" aria-hidden="true">!</div>
+      <h2 class="notice-title" id="noticeTitle">Vui lòng kiểm tra lại</h2>
+      <p class="notice-message" id="noticeMessage"></p>
+      <button class="notice-button" id="noticeClose" type="button">ĐÃ HIỂU</button>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
